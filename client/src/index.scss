@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-primary text-base leading-normal font-normal;
+    }
+    input {
+        @apply outline-none;
+    }
+}
+input:focus + .error-input {
+    display: none;
+}
