@@ -13,7 +13,7 @@ const Button = ({
     );
     return (
         <button
-            className={`flex items-center justify-center py-[13px] text-base font-semibold min-h-[54px] text-white rounded-[10px] ${isLoading ? "opacity-50 pointer-events-none" : ""} ${className}`}
+            className={`flex items-center justify-center p-3 text-base font-semibold min-h-[54px] text-white rounded-[10px] ${isLoading ? "opacity-50 pointer-events-none" : ""} ${className}`}
             type={type}
             {...rest}
         >

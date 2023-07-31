@@ -10,6 +10,7 @@ import { useState } from "react";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import IconEyeToggle from "../components/icons/IconEyeToggle";
+import ButtonGoogle from "../components/button/ButtonGoogle";
 
 const schenma = yup
     .object({
@@ -38,10 +39,7 @@ const SignUpPage = () => {
                 Already have an account?{" "} 
                 <Link to="/sign-in" className="text-primary underline font-medium">Sign in</Link>
             </p>
-            <button className="flex items-center justify-center gap-x-2.5 w-full py-[13px] border border-strock dark:border-darkStroke rounded-[10px] text-base font-semibold text-text2 dark:text-white mb-5">
-                <img srcSet="/Google.png 2x" alt="icon-google" />
-                <span>Sign up with google</span>
-            </button>
+            <ButtonGoogle></ButtonGoogle>
             <p className="text-text2 dark:text-white text-center text-xs mb-[5px] lg:mb-5 lg:text-sm">Or sign up with email</p>
             <form onSubmit={handleSubmit(handleSignUp)} className="flex flex-col gap-y-[10px]">
                 <FormGroup>

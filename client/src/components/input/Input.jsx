@@ -15,8 +15,8 @@ const Input = (props) => {
             <input
                 id={name}
                 type={type}
-                className={`w-full py-[15px] px-[25px] border rounded-[10px] text-text1 bg-transparent dark:text-white text-sm font-medium placeholder:text-text4 dark:placeholder:text-text2 ${
-                    error.length > 0 ? "border-error" : "border-strock dark:border-darkStroke"
+                className={`w-full py-[15px] px-[25px] border rounded-[10px] bg-transparent dark:text-white text-sm font-medium placeholder:text-text4 dark:placeholder:text-text2 ${
+                    error.length > 0 ? "border-error text-error" : "border-strock text-text1 dark:border-darkStroke"
                 } ${children ? "pr-14" : ""}`}
                 placeholder={error.length > 0 ? "" : placeholder}
                 {...field}

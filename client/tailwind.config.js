@@ -30,6 +30,9 @@ export default {
         darkSoft: "#24242C",
         darkStroke: "#3A3A43",
         darkRed: "#422C32",
+      },
+      boxShadow: {
+        itemCam: '0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)'
       }
     },
   },
