@@ -47,7 +47,7 @@ const SignInPage = () => {
                 <FormGroup>
                     <span className="text-sm font-medium text-primary py-[10px] text-right">Forgot password</span>
                 </FormGroup>
-                <Button type="submit" className="w-full bg-primary" isLoading={isSubmitting}>Sign in</Button>
+                <Button type="submit" className="w-full" kind="primary" isLoading={isSubmitting}>Sign in</Button>
             </form>
         </LayoutAuthenticationErrorBoundary>
     );

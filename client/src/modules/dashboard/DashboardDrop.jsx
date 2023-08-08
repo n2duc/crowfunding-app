@@ -1,6 +1,6 @@
 const DashboardDrop = () => {
     return (
-        <div className="flex items-center gap-2 text-text2 font-semibold text-base cursor-pointer">
+        <div className="flex items-center gap-2 text-text2 dark:text-text3 font-semibold text-base cursor-pointer">
             <span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

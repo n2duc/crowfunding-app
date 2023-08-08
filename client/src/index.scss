@@ -4,7 +4,11 @@
 
 @layer base {
     body {
-        @apply font-primary text-base leading-normal font-normal;
+        @apply font-primary text-base leading-normal font-normal mx-auto bg-liteBg dark:bg-darkBg;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        max-width: 1440px;
     }
     input {
         @apply outline-none;
@@ -15,4 +19,30 @@ input:focus + .error-input {
 }
 .active {
     @apply text-primary bg-primary bg-opacity-10;
+}
+.quill {
+    @apply border border-strock p-[15px] rounded-[10px];
+    .ql-toolbar.ql-snow {
+        @apply border-none bg-text4 bg-opacity-10 inline-block rounded-[10px] py-3 px-[18px] mb-[15px];
+    }
+    .ql-container.ql-snow {
+        @apply border-none text-sm;
+        .ql-editor {
+            font-family: Epilogue;
+            @apply p-[10px] text-text1 font-medium;
+            &::before {
+                @apply text-text4 left-[10px] not-italic;
+            }
+        }
+    }
+}
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+.scroll-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+    display: none;
 }

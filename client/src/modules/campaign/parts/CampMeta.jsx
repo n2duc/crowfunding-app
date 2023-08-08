@@ -4,7 +4,7 @@ const CampMeta = ({ amount = "0", text = "a", size = "sm" }) => {
     return (
         <div className="flex flex-col gap-y-1">
             <h4
-                className={`font-semibold text-text2 text ${
+                className={`font-semibold text-text2 dark:text-text4 text ${
                     size === "xs" ? "text-xs"
                         : size === "base" ? "text-base" 
                         : size === "lg" ? "text-xl"
@@ -13,7 +13,7 @@ const CampMeta = ({ amount = "0", text = "a", size = "sm" }) => {
             >
                 {amount}
             </h4>
-            <span className={`text-text4 ${size === "lg" ? "text-base" : size === "base" ? "text-sm" : "text-xs"}`}>{text}</span>
+            <span className={`text-text4 dark:text-text3 ${size === "lg" ? "text-base" : size === "base" ? "text-sm" : "text-xs"}`}>{text}</span>
         </div>
     );
 };

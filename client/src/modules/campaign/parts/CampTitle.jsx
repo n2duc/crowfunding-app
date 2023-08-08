@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const CampTitle = ({ children, className = "text-base font-semibold mb-[5px]" }) => {
     return (
-        <h3 className={`text-text1 ${className}`}>
+        <h3 className={`text-text1 dark:text-white ${className}`}>
             {children}
         </h3>
     );

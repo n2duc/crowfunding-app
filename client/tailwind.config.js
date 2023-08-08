@@ -28,11 +28,15 @@ export default {
         darkSecond: "#1C1C24",
         softDark: "#22222C",
         darkSoft: "#24242C",
+        redSoft: "#F9E3E3",
         darkStroke: "#3A3A43",
         darkRed: "#422C32",
+        grayf6: "#F6F6F6",
       },
       boxShadow: {
-        itemCam: '0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)'
+        itemCam: '0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)',
+        nav: '10px 10px 20px 0px rgba(2, 2, 2, 0.25)',
+        1: '4px 4px 8px 0px rgba(226, 226, 226, 0.20), -4px 4px 8px 0px rgba(226, 226, 226, 0.20)',
       }
     },
   },

@@ -11,7 +11,7 @@ const CampAuthor = ({ image = defaultImageAuthor, authorName = "Ngoc Duc" }) => 
             />
             <p className="text-xs text-text3">
                 by{" "}
-                <span className="font-semibold text-text2">{authorName}</span>
+                <span className="font-semibold text-text2 dark:text-text4">{authorName}</span>
             </p>
         </div>
     );

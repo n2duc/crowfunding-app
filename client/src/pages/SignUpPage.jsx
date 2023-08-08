@@ -61,7 +61,7 @@ const SignUpPage = () => {
                         <p className="text-xs text-text2 dark:text-text3 flex-1 lg:text-sm">I agree to the <span className="text-secondary underline">Terms of Use</span> and have read and understand the <span className="text-secondary underline">Privacy policy</span>.</p>
                     </Checkbox>
                 </div>
-                <Button type="submit" className="w-full bg-primary" isLoading={isSubmitting}>Create my account</Button>
+                <Button type="submit" className="w-full" kind="primary" isLoading={isSubmitting}>Create my account</Button>
             </form>
         </LayoutAuthenticationErrorBoundary>
     );

@@ -4,7 +4,7 @@ import { withErrorBoundary } from "react-error-boundary";
 import ErrorComponent from "../common/ErrorComponent";
 
 const Input = (props) => {
-    const { control, name, type = "text", error = "", placeholder, children } = props;
+    const { control, name, type = "text", error = "", placeholder, children, className } = props;
     const { field } = useController({
         control,
         name,
@@ -17,7 +17,7 @@ const Input = (props) => {
                 type={type}
                 className={`w-full py-[15px] px-[25px] border rounded-[10px] bg-transparent dark:text-white text-sm font-medium placeholder:text-text4 dark:placeholder:text-text2 ${
                     error.length > 0 ? "border-error text-error" : "border-strock text-text1 dark:border-darkStroke"
-                } ${children ? "pr-14" : ""}`}
+                } ${children ? "pr-14" : ""} ${className}`}
                 placeholder={error.length > 0 ? "" : placeholder}
                 {...field}
             />
@@ -40,6 +40,7 @@ Input.propTypes = {
     control: PropTypes.any.isRequired,
     error: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
 };
 
 export const InputBoundary = withErrorBoundary(Input, {

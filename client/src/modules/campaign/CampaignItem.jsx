@@ -7,7 +7,7 @@ import CampTitle from "./parts/CampTitle";
 
 const CampaignItem = () => {
     return (
-        <div className="bg-white rounded-[15px] shadow-itemCam">
+        <div className="bg-white dark:bg-darkSecond rounded-[15px] shadow-itemCam dark:shadow-none">
             <CampBanner></CampBanner>
             <div className="py-[15px] px-5">
                 <CampCate text="Education"></CampCate>

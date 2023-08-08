@@ -1,5 +1,13 @@
 import { NavLink } from "react-router-dom";
-import { IconCampaign, IconLight, IconLogout, IconPayment, IconProfile, IconSquare, IconWithdraw } from "../../components/icons";
+import {
+    IconCampaign,
+    IconLight,
+    IconLogout,
+    IconPayment,
+    IconProfile,
+    IconSquare,
+    IconWithdraw,
+} from "../../components/icons";
 
 const sidebarItem = [
     {
@@ -38,14 +46,26 @@ const sidebarItem = [
         title: "Light/Dark",
         path: "/!",
         onClick: () => {},
-    }
+    },
 ];
 
 const DashboardSidebar = () => {
+    const activeLink =
+        "text-primary bg-primary bg-opacity-10 dark:text-iconColor dark:bg-darkStroke";
+    const navLinkClass =
+        "flex items-center gap-x-5 md:justify-center text-iconColor dark:text-text3 last:mt-[130px] last:md:shadow-[10px_10px_20px_0px_rgba(211,211,211,0.25)] md:p-3 py-[14px] px-5 md:rounded-[10px] dark:last:md:shadow-nav";
     return (
-        <div className="w-full py-10 px-[14px] md:w-[76px] rounded-[20px] mt-4 bg-white shadow-[10px_10px_20px_0px_rgba(218,213,213,0.15)] flex flex-col md:gap-y-[30px] gap-y-[15px] flex-shrink-0">
+        <div className="w-full py-10 px-[14px] md:w-[76px] rounded-[20px] mt-4 bg-white dark:bg-darkSecond shadow-[10px_10px_20px_0px_rgba(218,213,213,0.15)] dark:shadow-none flex flex-col md:gap-y-[30px] gap-y-[15px] flex-shrink-0">
             {sidebarItem.map((link) => (
-                <NavLink to={link.path} key={link.title} className="flex items-center gap-x-5 md:justify-center text-iconColor last:mt-[130px] last:md:shadow-[10px_10px_20px_0px_rgba(211,211,211,0.25)] md:p-3 py-[14px] px-5 md:rounded-[10px]">
+                <NavLink
+                    to={link.path}
+                    key={link.title}
+                    className={({ isActive }) =>
+                        isActive
+                            ? `${navLinkClass} ${activeLink}`
+                            : navLinkClass
+                    }
+                >
                     <span>{link.icon}</span>
                     <span className="md:hidden">{link.title}</span>
                 </NavLink>
